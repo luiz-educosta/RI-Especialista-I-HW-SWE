@@ -1,0 +1,53 @@
+1 - Estabelecer comunicação com o gateway LoRa e ficar conectado a todo momento
+
+Como forma de desenvolver o teste da aplicação. Tem-se a execução de um comando utilizando a seguinte chamada para verificar a comunicação com LoRa:
+
+while(comunicacao_gateway_lora() == false);
+
+Antes de descrever a implementação da função e toda a sua lógica, primeiro, analisa-se o teste descrito, vendo que todo o firmware da porta já está desenvolvido, para desenvolver o teste tem-se que utilizar a comunicação LoRa ponto-a-ponto: Receptor, para testar as funções do projeto. 
+Com toda a biblioteca LoRa instalada na IDE utilizada, agora deve-se estabelecer a comunicação com o Gatway Lora e ficar conectado a todo momento. Para isto, utiliza-se uma função dentro do while que recebe vazio e retorna um valor boleano (TRUE: comunicação OK ou FALSE: Falha na comunicação). Abaixo, tem-se toda a função implementada.
+
+bool comunicacao_gateway_lora(void)
+{
+    bool status_comunicacao = false;
+    Serial.println("Tentando iniciar comunicação com o rádio LoRa...");
+    SPI.begin(SCK_LORA, MISO_LORA, MOSI_LORA, SS_PIN_LORA);
+    LoRa.setPins(SS_PIN_LORA, RESET_PIN_LORA, LORA_DEFAULT_DIO0_PIN);
+     
+    if (!LoRa.begin(FREQ)) 
+    {
+        Serial.println("Tentando iniciar comunicação com o rádio LoRa, aguarde...");
+
+        /* Escrevendo a mensagem para tentar a comunicação em 5 segundos */
+        display.clearDisplay();    
+        display.setCursor(0, OLED_LINE1);
+        display.print("Tentando iniciar comunicação com o rádio LoRa, aguarde...");
+        display.display();
+        delay(5000);
+        status_comunicacao = false;    }
+    else
+    {
+        LoRa.setTxPower(GANHOLORA); 
+        status_comunicacao = true;
+
+	Serial.println("Comunicação com o rádio LoRa ok!");
+
+        display.clearDisplay();   
+        display.setCursor(0, OLED_LINE1);
+        display.print("Ganho da antena estabelecido: ");
+        display.println(GANHOLORA);
+        display.setCursor(0, OLED_LINE2);
+        display.print("Comunicação com o rádio LoRa ok!");
+        display.setCursor(0, OLED_LINE3);
+        display.display();
+//coloca no modulo receptor continuo
+        LoRa.receive();
+    }
+ 
+    return status_comunicacao;
+}
+
+No início da função comunicacao_gateway_lora, o valor da variável status_comunicacao já é inicializado como falso, apenas para uma questão de segurança. Logo abaixo, conforme mencionado anteriormente, utiliza-se o código para inicializar o chip LoRa através das funções SPI.begin() e LoRa.setPins().
+Na função SPI.begin() altera-se os padrões inserindo os que foram definidos anteriormente, tais como: SCK_LORA, MISO_LORA, MOSI_LORA, SS_PIN_LORA. Já na função LoRa.setPins(), altera-se o pino de seleção de escravo a ser usado, o pino de reinicialização e mantem o padrão DIO0 utilizado.
+A estrutura de decisão é utilizada para verificar se a conexão foi realizada com a frequência do Gatway, caso não, ela fica tentando de cinco em cinco segundos até obter sucesso. Para que isto ocorra, utiliza-se a negação da função LoRa.begin(). Esta função retorna 1 se obter sucesso ou 0 se tiver falha e recebe como parâmetro a frequência utilizada pela rádio, que neste teste optou por uma frequência de 915MHz, definida em uma constante anteriormente.
+Quando obtém sucesso com a comunicação com a antena, implementa-se o ganho pela função LoRa.setTxPower(), onde ela recebe o valor definido anteriormente dado em dBm, coloca-se o modulo para receptor continuo através da função LoRa.receive(); e altera-se o estado da variável status_comunicacao retornando assim, o valor verdadeiro para a função comunicacao_gateway_lora.

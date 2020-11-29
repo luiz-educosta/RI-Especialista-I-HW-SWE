@@ -1,0 +1,17 @@
+2 - Quando houver violação da porta, o sensor magnético é ativado e gera uma notificação que é enviado pela comunicação LoRa.
+
+Dentro do void loop(), em primeiro, são declaradas as variáveis para a implementação do firmware desenvolvido. Dentre estas, encontra-se a variável inteira pacoteRecebido, logo após a sua declaração, ela recebe a função LoRa.parsePacket() que é responsável por checar se um pacote foi recebido. Embora é uma função que não recebe valor, ela retorna o tamanho do pacote recebido em bytes ou 0 se o pacote não foi recebido, por isto o motivo da função pacoteRecebido estar recebendo a declaração inteira.
+Esta função, é utilizada em uma lógica de condição, para que quando ela entregar o seu valor 1, já imprima no display a notificação do sensor violado. Abaixo tem-se o código para a parte de violação utilizado, juntamente com o que implementa para imprimir no display a mensagem:
+
+if(pacoteRecebido) {
+    
+        //Informando que está recebendo informação
+        display.clearDisplay();   
+        display.setCursor(0, OLED_LINE1);
+        display.print("RSSI: ");
+        display.println(lora_rssi);
+        display.setCursor(0, OLED_LINE2);
+        display.print("Sensor detectado!");
+        display.setCursor(0, OLED_LINE3);
+        display.display();
+...}

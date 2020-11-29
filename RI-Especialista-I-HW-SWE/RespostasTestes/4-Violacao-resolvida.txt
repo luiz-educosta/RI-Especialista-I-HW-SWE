@@ -1,0 +1,28 @@
+4 - Violação resolvida led verde acende.
+
+Para o teste de verificar se a violação foi resolvida, tem-se a variavel ultimo_byte_recebido, localizado durante a leitura da informação. Este recebe a função LoRa.peekString(), que retorna o último dado recebido, sendo assim o último dado enviado do transmissor indicando que a violação foi resolvida. 
+Abaixo tem-se o código desta lógica, onde a leitura é feita enquanto ainda está verificando a informação transmitida, logo que a porta do cofre é fechada, guarda este último comando na variável ultimo_byte_recebido e mostra no display para confirmação se a violação foi resolvida.
+
+if(pacoteRecebido) {
+    
+        ...
+        //verificando a informação que o tx enviou
+        while (LoRa.available()) {
+        …
+        ultimo_byte_recebido = LoRa.peekString();            
+        } 
+...       
+    } else {
+        /*quando a violação for resolvida, 
+        verifica se o led verde acendeu*/
+        lora_rssi = LoRa.packetRssi();
+        display.clearDisplay();   
+        display.setCursor(0, OLED_LINE1);
+        display.print("RSSI: ");
+        display.println(lora_rssi);
+        display.setCursor(0, OLED_LINE2);
+        display.print("Ultimos dados enviados: ");
+        display.setCursor(0, OLED_LINE3);
+        display.println(ultimo_byte_recebido);
+        display.display();
+    }  

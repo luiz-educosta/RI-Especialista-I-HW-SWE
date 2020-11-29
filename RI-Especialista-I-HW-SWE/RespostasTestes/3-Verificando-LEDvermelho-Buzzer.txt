@@ -1,0 +1,22 @@
+3 - Ao detectar a violação o led vermelho acende e buzzer fica tocando a todo momento.
+
+Tanto para fazer a checagem que o LED vermelho e o buzzer foram ligados durante o processo de violação, é necessário ler o que o pacote foi entregue primeiro. Para isto, utiliza-se a seguinte linha de código:
+
+while (LoRa.available()) {
+        byte_recebido = LoRa.readString();
+        ....            
+        }
+Na função while, recebe-se outra função, a função LoRa.available(). Esta função recebe vazio e retorna o número de bytes disponíveis para leitura. Com estas duas funções, tem-se um loop infinito enquanto está recebendo informação.
+Dentro deste conjunto de funções, é feita a leitura da informação através da função LoRa.readString() que recebe vazio e retorna o próximo byte no pacote ou -1 se não tem bytes disponíveis e armazena na variável byte_recebido.
+O motivo de estar utilizando uma string, foi para poder ler o que o transmissor está enviando quando foi violada, onde tem-se o valor de duas variáveis o LED vermelho e o buzzer. Abaixo tem-se o código com a informação recebida para o seu monitoramento no display:
+
+        lora_rssi = LoRa.packetRssi();
+        display.clearDisplay();   
+        display.setCursor(0, OLED_LINE1);
+        display.print("RSSI: ");
+        display.println(lora_rssi);
+        display.setCursor(0, OLED_LINE2);
+        display.print("Dados enviados: ");
+        display.setCursor(0, OLED_LINE3);
+        display.println(byte_recebido);
+        display.display();  
