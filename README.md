@@ -33,7 +33,7 @@ Foi projetado um firmware que controla todos os periféricos descritos acima. De
 
 1. Criar um repositório no git e colocar todas as respostas dessa atividade e enviar o link por e-mail. [Clique aqui](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE)
 
-1. Descrever de forma sucinta, passo a passo, de como você fará os testes de cada ação - (formato word, seja organizado!). [Ver documento]()
+1. Descrever de forma sucinta, passo a passo, de como você fará os testes de cada ação - (formato word, seja organizado!). [Ver documento](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/tree/main/RI-Especialista-I-HW-SWE/Documentacao)
 
 1. Escolher uma das ações que será testada e fazer uma solução para teste automatizado.
 Fique a vontade para usar qualquer tipo de ferramenta como Raspberry, BeagleBone, Arduino, KL25Z, MSP32 , etc.. (Seja criativo!) [Confira o teste automatizado](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/SolucaoAutomatizada/CodigoFonte/CodigoFonte.ino) 
