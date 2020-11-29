@@ -19,18 +19,18 @@ Foi projetado um firmware que controla todos os periféricos descritos acima. De
 ### Ações que o firmware deve tomar durante o cenário de violação:
 ***
 
-1. Estabelecer comunicação com o gateway LoRa e ficar conectado a todo momento
-1. Quando houver violação da porta, o sensor magnético é ativado e gera uma notificação que é enviado pela comunicação LoRa.
-1. Ao detectar a violação o led vermelho acende e buzzer fica tocando a todo momento.
-1. Violação resolvida led verde acende.
+1. Estabelecer comunicação com o gateway LoRa e ficar conectado a todo momento. [Resposta](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/RespostasTestes/1-Estabelecer-comunica%C3%A7%C3%A3o-com-o-gateway.txt)
+1. Quando houver violação da porta, o sensor magnético é ativado e gera uma notificação que é enviado pela comunicação LoRa. [Resposta](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/RespostasTestes/2-Notificacao.txt)
+1. Ao detectar a violação o led vermelho acende e buzzer fica tocando a todo momento. [Resposta](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/RespostasTestes/3-Verificando-LEDvermelho-Buzzer.txt)
+1. Violação resolvida led verde acende. [Resposta](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/RespostasTestes/4-Violacao-resolvida.txt)
 
 #### Sua função é testar se essas 4 funções estão funcionando de acordo. Para isso será necessário:
 ***
 
-1. Criar um repositório no git e colocar todas as respostas dessa atividade e enviar o link por e-mail.
+1. Criar um repositório no git e colocar todas as respostas dessa atividade e enviar o link por e-mail. [Clique aqui](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE)
 
-1. Descrever de forma sucinta, passo a passo, de como você fará os testes de cada ação - (formato word, seja organizado!).
+1. Descrever de forma sucinta, passo a passo, de como você fará os testes de cada ação - (formato word, seja organizado!). [Ver documento]()
 
 1. Escolher uma das ações que será testada e fazer uma solução para teste automatizado.
-Fique a vontade para usar qualquer tipo de ferramenta como Raspberry, BeagleBone, Arduino, KL25Z, MSP32 , etc.. (Seja criativo!) 
+Fique a vontade para usar qualquer tipo de ferramenta como Raspberry, BeagleBone, Arduino, KL25Z, MSP32 , etc.. (Seja criativo!) [Confira o teste automatizado](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/SolucaoAutomatizada/CodigoFonte/CodigoFonte.ino) 
 
