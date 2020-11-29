@@ -43,8 +43,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 void inicializacaoDisplay(void);
 bool comunicacao_gateway_lora(void);
 
-bool comunicacao_gateway_lora(void)
-{
+bool comunicacao_gateway_lora(void){
     bool status_comunicacao = false;
     Serial.println("Tentando iniciar comunicação com o rádio LoRa...");
     SPI.begin(SCK_LORA, MISO_LORA, MOSI_LORA, SS_PIN_LORA);
@@ -82,8 +81,7 @@ bool comunicacao_gateway_lora(void)
     return status_comunicacao;
 }
 
-void inicializacaoDisplay(void)
-{
+void inicializacaoDisplay(void){
     if(!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)){
         Serial.println("Falha ao inicializar comunicacao com OLED");        
     }else{
