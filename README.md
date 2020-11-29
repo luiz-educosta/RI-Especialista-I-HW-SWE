@@ -1,4 +1,8 @@
 # RI-Especialista-I-HW-SWE
+
+**Este repositório foi criado com o intuito de se postar a resolução do teste de seleção para vaga interna de Especialista I (HW/SW) no ICC - Inatel.**
+
+**Abaixo, encontra-se o cenário proposto e os respectivos links das resoluções.**
 ***
 
 
@@ -24,7 +28,7 @@ Foi projetado um firmware que controla todos os periféricos descritos acima. De
 1. Ao detectar a violação o led vermelho acende e buzzer fica tocando a todo momento. [Resposta](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/RespostasTestes/3-Verificando-LEDvermelho-Buzzer.txt)
 1. Violação resolvida led verde acende. [Resposta](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/RespostasTestes/4-Violacao-resolvida.txt)
 
-#### Sua função é testar se essas 4 funções estão funcionando de acordo. Para isso será necessário:
+### Sua função é testar se essas 4 funções estão funcionando de acordo. Para isso será necessário:
 ***
 
 1. Criar um repositório no git e colocar todas as respostas dessa atividade e enviar o link por e-mail. [Clique aqui](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE)
