@@ -1,6 +1,6 @@
 # RI-Especialista-I-HW-SWE
 
-**Este repositório foi criado com o intuito de se postar a resolução do teste de seleção para vaga interna de Especialista I (HW/SW) no ICC - Inatel.**
+**Este repositório foi criado com o intuito de postar a resolução do teste de seleção para vaga interna de Especialista I (HW/SW) no ICC - Inatel.**
 
 **Abaixo, encontra-se o cenário proposto e os respectivos links das resoluções.**
 ***
