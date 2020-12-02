@@ -36,5 +36,11 @@ Foi projetado um firmware que controla todos os periféricos descritos acima. De
 1. Descrever de forma sucinta, passo a passo, de como você fará os testes de cada ação - (formato word, seja organizado!). [Ver documento](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/tree/main/RI-Especialista-I-HW-SWE/Documentacao)
 
 1. Escolher uma das ações que será testada e fazer uma solução para teste automatizado.
-Fique a vontade para usar qualquer tipo de ferramenta como Raspberry, BeagleBone, Arduino, KL25Z, MSP32 , etc.. (Seja criativo!) [Confira o teste automatizado](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/SolucaoAutomatizada/CodigoFonte/CodigoFonte.ino) 
+Fique a vontade para usar qualquer tipo de ferramenta como Raspberry, BeagleBone, Arduino, KL25Z, MSP32 , etc.. (Seja criativo!).
+
+[Confira o código da documentação!](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/blob/main/RI-Especialista-I-HW-SWE/SolucaoDocumenta%C3%A7%C3%A3o/CodigoFonte/CodigoFonte.ino) 
+
+[Confira o código da solução automatizada!](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/tree/main/RI-Especialista-I-HW-SWE/SolucaoAutomatizada)
+
+[Link do vídeo da demonstração pratica!!!](https://posinatel-my.sharepoint.com/:f:/g/personal/luizeduardorodrigues_tai_inatel_br/Egle4tCo5TNGiONKKpCOGSwBsEpPabineQ0s3Lr-n8PhhA?email=luizeduardorodrigues%40tai.inatel.br&e=epcaXS) OBS: Como o link para o vídeo está privado, enviar solicitação de e-mail para aprovação.
 
