@@ -42,5 +42,5 @@ Fique a vontade para usar qualquer tipo de ferramenta como Raspberry, BeagleBone
 
 [Confira o código da solução automatizada!](https://github.com/luiz-educosta/RI-Especialista-I-HW-SWE/tree/main/RI-Especialista-I-HW-SWE/SolucaoAutomatizada)
 
-[Link do vídeo da demonstração pratica!!!](https://posinatel-my.sharepoint.com/:f:/g/personal/luizeduardorodrigues_tai_inatel_br/Egle4tCo5TNGiONKKpCOGSwBsEpPabineQ0s3Lr-n8PhhA?email=luizeduardorodrigues%40tai.inatel.br&e=epcaXS) OBS: Como o link para o vídeo está privado, enviar solicitação de e-mail para aprovação.
+[Link do vídeo da demonstração pratica!!!](https://www.youtube.com/watch?v=1tfnk34iRz8&feature=youtu.be) 
 
